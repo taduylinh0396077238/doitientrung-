@@ -9,15 +9,15 @@
 </head>
 <body>
 <div class="one">
-<h1>Quy đổi tệ</h1>
-<div>
-    <div >
-        Tệ = <input type="text" id="ndt" /> <br> <br>
-        VNĐ = <span id="vnd"></span>
+    <h1>Quy đổi tệ</h1>
+    <div>
+        <div >
+            Tệ = <input type="text" id="ndt" /> <br> <br>
+            VNĐ = <span id="vnd"></span>
+        </div>
+        <br>
+        <button id="button" type="button" onclick="load()">Đổi</button> <br>
     </div>
-    <br>
-    <button id="button" type="button" onclick="load()">Đổi</button> <br>
-</div>
 </div>
 <script>
     document.getElementsByTagName("body")[0].addEventListener("keyup", function(event) {
@@ -33,7 +33,7 @@
     function load(){
         var ndt = document.querySelector('#ndt').value;
         ndt = parseFloat(ndt)
-        vnd = Math.floor((ndt+48)*1.03*3758).toString()
+        vnd = Math.floor((ndt+48)*1.03*3785).toString()
 
         document.querySelector('#vnd').innerHTML = numberWithCommas(vnd) + ' vnđ'
     }
