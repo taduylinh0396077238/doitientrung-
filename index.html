@@ -33,7 +33,7 @@
     function load(){
         var ndt = document.querySelector('#ndt').value;
         ndt = parseFloat(ndt)
-        vnd = Math.floor((ndt+48)*1.03*3785).toString()
+        vnd = Math.floor((ndt+48)*1.03*3728).toString()
 
         document.querySelector('#vnd').innerHTML = numberWithCommas(vnd) + ' vnđ'
     }
